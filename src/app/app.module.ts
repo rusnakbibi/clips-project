@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { NavigationComponent } from './navigation/navigation.component'
+import { provideEnvironmentNgxMask } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,9 @@ import { NavigationComponent } from './navigation/navigation.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserModule
+    UserModule,
   ],
-  providers: [],
+  providers: [provideEnvironmentNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
